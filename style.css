@@ -1,0 +1,1206 @@
+/* Estilos Generales */
+body {
+    font-family: sans-serif; /* O la fuente que prefieras */
+    margin: 0;
+    padding-top: 56px; /* Ajusta según la altura de tu navbar fijo */
+    position: relative; /* Necesario para posicionar el overlay */
+    background-color: #f8f9fa; /* Color de fondo por defecto (similar a bg-white) */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: hotpink; /* Color rosa por defecto para títulos */
+}
+
+/* Los colores de texto se manejarán por sección */
+p, li, address {
+  color: inherit;
+}
+  /* Intencionalmente sin propiedades para heredar el color del contenedor */
+
+
+/* HEADER */
+header {
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: #e0e0e0 3px solid;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+header .logo img {
+    width: 40px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #d81b60;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: rgba(255, 255, 255, 0.85); /* Blanco semitransparente */
+  backdrop-filter: blur(8px); /* Difuminado */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .dropdown-menu,
+.custom-navbar .dropdown-item,
+.custom-navbar .navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #000 !important;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .dropdown-item:hover {
+  color: #d81b60 !important; /* Color rosa al pasar el mouse */
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: 700;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #d81b60 !important;
+}
+
+.custom-navbar .dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* Ícono visible sobre fondo claro */
+}
+
+/* Evita que el contenido quede oculto debajo del navbar */
+body {
+  padding-top: 30px; /* Ajustar según altura de navbar */
+}
+
+
+
+/* Estilos para la sección de Inicio */  
+#inicio.hero {  
+    position: relative; /* Para posicionar el overlay */  
+    color: #fff; /* Color del texto */  
+    text-align: center;  
+    padding: 8rem 0;  
+    /* Aquí definimos la imagen de fondo */  
+    background-image: url('Imagenes y Videos/Imagenes y Videos/Generales/Grupo-avanzados-portada.jpg'); /* !!! REEMPLAZA ESTO CON LA RUTA DE TU IMAGEN !!! */  
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    z-index: 1; /* Asegura que la sección esté por encima de cualquier cosa detrás */  
+    /* AUMENTA MÁS EL PADDING */  
+    /* Probemos con 12rem arriba y abajo */  
+    padding: 12rem 0; /* Ajusta este valor (ej: 15rem, 20rem) para controlar el espacio vertical */  
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para el texto del héroe */
+    /* AUMENTA MÁS LA ALTURA MÍNIMA (opcional, pero recomendado) */  
+    /* Cubramos al menos el 90% o 100% de la altura de la ventana */  
+    min-height: 100vh; /* Ajusta este valor (ej: 80vh, 90vh, 100vh) o usa un valor fijo como min-height: 800px; */  
+    width: 100%;
+    height: 100vh; /* Establece la altura al 100% de la altura del viewport */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    display: flex; /* Para centrar el contenido */
+}  
+
+
+
+
+/* Pseudo-elemento para el degradado sobre la imagen de fondo */  
+#inicio.hero::before {  
+    content: "";  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    background: linear-gradient(rgba(255, 182, 193, 0.7), rgba(0, 0, 0, 0.7)); /* Degradado de rosa claro a negro */  
+    z-index: -1; /* Coloca el degradado detrás del contenido pero encima de la imagen */  
+}  
+
+/* Para asegurar que el contenedor con el texto esté por encima del pseudo-elemento */  
+#inicio.hero .container {  
+    position: relative;  
+    z-index: 2; /* Asegura que el contenido (texto y botón) esté por encima del degradado */  
+}  
+
+
+.hero h1 {  
+    margin-bottom: 10px;  
+    font-size: 3.5rem;  
+    color: #fff; /* Texto blanco */  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar legibilidad */  
+}  
+
+.hero p {  
+    font-size: 1.5rem;  
+    margin-bottom: 30px;  
+    font-style: italic;  
+     color: #fff; /* Texto blanco */  
+     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);  
+}  
+
+.cta-button {  
+    display: inline-block;  
+    background: #e91e63;  
+    color: #fff;  
+    padding: 12px 25px;  
+    text-decoration: none;  
+    border: none;  
+    border-radius: 5px;  
+    font-size: 1.2rem;  
+    cursor: pointer;  
+    transition: background 0.3s ease;  
+    text-align: center;  
+}  
+
+.cta-button:hover {  
+    background: #d81b60;  
+}  
+
+.cta-button.small {  
+     padding: 8px 15px;  
+     font-size: 1rem;  
+     margin-top: 15px;  
+}  
+
+
+.section {  
+    padding: 5rem 0;  
+    text-align: center;  
+    position: relative;  
+    overflow: hidden;  
+}  
+
+.section h2 {  
+    font-size: 3rem;  
+    margin-bottom: 20px;  
+    color: #000;  
+}  
+
+.section p {  
+    margin-bottom: 30px;  
+    color: #555;  
+    font-size: 1.1rem;  
+}  
+
+.gray-background {  
+    background: #333;  
+    color: #fff;  
+}  
+
+.gray-background h2 {  
+    color: #fff;  
+}  
+
+.gray-background p {  
+     color: #ccc;  
+}  
+
+.gray-background .grid-item h3 {  
+    color: #fff;  
+}  
+
+Importante para el cambio de contenedores
+.grid-container {  
+    display: auto;  
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+    gap: 30px;  
+    margin-top: 60px;  
+}  
+
+.grid-item {  
+    background: #fff;  
+    padding: 25px;  
+    border-radius: 8px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    text-align: center;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: space-between;  
+    align-items: auto;  
+}  
+
+.gray-background .grid-item {  
+     background: #444;  
+     color: #fff;  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+}  
+
+.grid-item h3 {  
+    margin-bottom: 10px;  
+    color: #e91e63;  
+    font-size: 1.5rem;  
+}  
+
+.grid-item p {  
+    color: #555;  
+     margin-bottom: 15px;  
+}  
+
+.gray-background .grid-item p {  
+    color: #ccc;  
+}  
+
+
+.media-container {  
+    width: 100%;  
+    height: 200px;  
+    background-color: #eee;  
+    margin-bottom: 15px;  
+    border-radius: 5px;  
+    overflow: hidden;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+.media-container img,  
+.media-container video {  
+    display: block;  
+    max-width: 100%;  
+    max-height: 100%;  
+    object-fit: cover;  
+}  
+
+.media-container.large {  
+    height: 350px;  
+}  
+
+.media-container.small {  
+    height: 150px;  
+    width: 150px;  
+    border-radius: 50%;  
+     flex-shrink: 0;  
+}  
+
+
+.content-block {  
+    display: flex;  
+    align-items: center;  
+    gap: 50px;  
+    margin-top: 60px;  
+    margin-bottom: 60px;  
+    text-align: left;  
+    flex-wrap: wrap;  
+}  
+
+.content-block > div {  
+    flex-basis: 50%;  
+    flex-grow: 1;  
+}  
+
+.content-block .media-container {  
+    flex-basis: 40%;  
+    height: 300px;  
+    flex-grow: 1;  
+}  
+
+.content-block h3 {  
+    margin-bottom: 15px;  
+    color: #e91e63;  
+    font-size: 2rem;  
+}  
+
+.content-block p,  
+.content-block ul {  
+     color: #555;  
+}  
+
+.gray-background .content-block p,  
+.gray-background .content-block ul {  
+    color: #ccc;  
+}  
+
+.content-block ul {  
+    list-style: disc;  
+    margin-left: 20px;  
+}  
+
+.content-block ul li {  
+    margin-bottom: 8px;  
+}  
+
+
+.downloads ul {  
+    list-style: none;  
+    margin-top: 20px;  
+    padding-left: 0;  
+}  
+
+.downloads li {  
+    margin-bottom: 15px;  
+}  
+
+.downloads a {  
+    color: #e91e63;  
+    text-decoration: none;  
+    font-weight: bold;  
+    transition: color 0.3s ease;  
+}  
+
+.downloads a:hover {  
+    text-decoration: underline;  
+    color: #d81b60;  
+}  
+
+.image-mosaic {  
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+     gap: 15px;  
+}  
+
+.image-mosaic .media-container {  
+    height: 250px;  
+    border-radius: 5px;  
+}  
+
+
+/* Seccion Ballroom */
+#ballroom {
+  background-color: #000;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+/* Tamaño de las imágenes más grande, sin cortar */
+.grid-item {
+  width: 400px; /* más grande */
+  aspect-ratio: 4 / 3; /* proporción más natural para evitar corte */
+  background-color: black;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+  background-size: contain; /* que la imagen se ajuste sin cortar */
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.grid-item:hover {
+  transform: scale(1.02);
+}
+
+/* Overlay inicialmente oculto */
+.grid-item .overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semitransparente para mejor lectura */
+  color: #fff; /* texto blanco */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  font-weight: 600;
+}
+
+.grid-item .overlay h4 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.grid-item .overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.grid-item .overlay .btn-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #d81b60;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(216, 27, 96, 0.7);
+}
+
+.grid-item .overlay .btn-link:hover {
+  background-color: #ad1457;
+  box-shadow: 0 3px 10px rgba(173, 20, 87, 0.8);
+}
+
+/* Mostrar overlay al pasar el mouse */
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+
+ /* Sección Ritmos Sociales Latinos */
+/* Contenedor grid para los items */
+.grid-container-latinos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Cada item del grid con tamaño fijo y fondo */
+.grid-item-latinos {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Cuadrado fijo */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* Ajusta sin cortar la imagen */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.grid-item-latinos:hover {
+  transform: scale(1.05);
+}
+
+/* Overlay oscuro oculto por defecto */
+.overlay-latinos {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 1rem;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.grid-item-latinos:hover .overlay-latinos {
+  opacity: 1;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Títulos y texto dentro del overlay en blanco */
+.overlay-latinos h4,
+.overlay-latinos p {
+  color: white !important;
+}
+
+.overlay-latinos h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-latinos p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Botón rosa */
+.btn-link-latinos {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ff69b4;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-link-latinos:hover {
+  background-color: #ff85c1;
+}
+
+
+/* Estilos para la sección de Eventos con fondo de imagen/video */  
+/* Estilos generales para la sección de eventos */
+.event-section {
+    position: relative;
+    color: #fff;
+    padding: 80px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo de imagen o video en toda la sección */
+.event-section .background-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.event-section .background-media img,
+.event-section .background-media video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Capa oscura semitransparente encima del fondo */
+.event-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+/* Contenedor del contenido */
+.event-section .container.event-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Títulos y párrafos */
+.event-section .event-content h2,
+.event-section .event-content h3 {
+    color: #e91e63; /* Rosa */
+    text-shadow: inherit;
+    margin-bottom: 1rem;
+}
+
+.event-section .event-content h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.event-section .event-content h3 {
+    font-size: 1.6rem;
+}
+
+.event-section .event-content p {
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón de llamada a la acción */
+.event-section .btn,
+.event-section .cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    background-color: #ffffff;
+    color: #e91e63;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+    border: none;
+}
+
+.event-section .btn:hover,
+.event-section .cta-button:hover {
+    background-color: #ffc1e3;
+    color: #000;
+}
+
+/* Sección de descargas */
+.event-section .downloads {
+    margin-top: 40px;
+}
+
+.event-section .downloads h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #e91e63; /* Rosa */
+}
+
+.event-section .downloads ul {
+    list-style: none;
+    padding: 0;
+}
+
+.event-section .downloads ul li {
+    margin-bottom: 10px;
+}
+
+.event-section .downloads a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.event-section .downloads a:hover {
+    color: #ff80ab;
+}
+
+/* Espaciado de bloques de contenido */
+.event-section .content-block {
+    margin-bottom: 40px;
+}
+
+/* Utilidades opcionales si no usás Bootstrap */
+.event-section .mb-2 { margin-bottom: 0.5rem; }
+.event-section .mb-3 { margin-bottom: 1rem; }
+.event-section .mb-4 { margin-bottom: 1.5rem; }
+.event-section .mb-5 { margin-bottom: 2rem; }
+.event-section .mt-3 { margin-top: 1rem; }
+.event-section .mt-4 { margin-top: 1.5rem; }
+
+
+
+  
+/* Sección Profesore */
+
+/* Asegura que los títulos dentro de las secciones parallax sean rosas */
+.style-section h1, .style-section h2, .style-section h3, .style-section h4, .style-section h5, .style-section h6 {
+    color: hotpink;
+    text-shadow: none; /* Elimina la sombra del título para que el rosa sea más puro */
+}
+
+/* Fondo de Secciones Planas */
+.bg-black {
+    background-color: black;
+    color: white; /* Texto blanco por defecto para secciones negras */
+}
+
+.bg-white {
+    background-color: white;
+    color: black; /* Texto negro por defecto para secciones blancas */
+}
+
+/* Asegura que los títulos mantengan su color rosa en secciones de fondo plano */
+.bg-black h1, .bg-black h2, .bg-black h3, .bg-black h4, .bg-black h5, .bg-black h6,
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6 {
+    color: hotpink;
+}
+
+/* Asegura el color del texto en secciones con fondo específico */
+.bg-black p, .bg-black li, .bg-black address, .bg-black a:not(.btn) {
+     color: white;
+}
+
+.bg-white p, .bg-white li, .bg-white address, .bg-white a:not(.btn) {
+     color: white;
+}
+/* Secciones con Fondo Parallax */
+.style-section {
+    padding: 80px 0; /* Espacio vertical para cada sección */
+    background-attachment: fixed; /* Efecto Parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white; /* **Color de texto blanco por defecto para secciones parallax** */
+    position: relative; /* Necesario para el overlay */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra ligera al texto para contraste */
+}
+.parallax-sociales-5 { /* Usado para Profesores Principales */
+    background-image: url('https://i.pinimg.com/736x/a1/50/c3/a150c3dfb9ea9ca4c21575dfebabcf66.jpg'); /* Imagen para Profesores */
+}
+
+/* Estilos para la información del Profesor dentro de las secciones de estilo */
+.style-section .row.justify-content-center.mt-5 img {
+     max-width: 150px; /* Tamaño de la foto del profesor */
+     border: 3px solid hotpink; /* Borde rosa alrededor de la foto */
+     padding: 3px; /* Espacio entre el borde y la foto */
+}
+/* Estilos para la tarjeta del profesor principal (#profesores-main) */
+/* Estilos exclusivos para tarjetas de profesores */
+.profesor-card-custom {
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+/* Contenedor de imagen */
+.profesor-img-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.profesor-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Overlay al hacer hover */
+.profesor-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profesor-img-container:hover .profesor-overlay {
+    opacity: 1;
+}
+
+/* Texto dentro del overlay */
+.profesor-text {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.profesor-text h5 {
+    color: hotpink;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.profesor-text p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+/* Estilos para los puntos de navegación (Slick Carousel) */  
+.slick-dots {  
+    position: absolute;  
+    bottom: -30px; /* Posiciona los puntos debajo del carrusel */  
+    display: block;  
+    width: 100%;  
+    padding: 0;  
+    margin: 0;  
+    list-style: none;  
+    text-align: center;  
+}  
+
+.slick-dots li {  
+    position: relative;  
+    display: inline-block;  
+    width: 20px;  
+    height: 20px;  
+    margin: 0 5px;  
+    padding: 0;  
+    cursor: pointer;  
+}  
+
+.slick-dots li button {  
+    font-size: 0;  
+    line-height: 0;  
+    display: block;  
+    width: 20px;  
+    height: 20px;  
+    padding: 5px;  
+    cursor: pointer;  
+    color: transparent;  
+    border: 0;  
+    outline: none;  
+    background: transparent;  
+}  
+
+.slick-dots li button:before {  
+    font-family: "slick";  
+    font-size: 6px; /* Tamaño de los puntos */  
+    line-height: 20px;  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 20px;  
+    height: 20px;  
+    content: "•";  
+    text-align: center;  
+    opacity: 0.25;  
+    color: #e91e63; /* Color rosa para los puntos inactivos */  
+    -webkit-font-smoothing: antialiased;  
+    -moz-osx-font-smoothing: grayscale;  
+}  
+
+.slick-dots li.slick-active button:before {  
+    opacity: 0.75;  
+    color: #d81b60; /* Color rosa más oscuro para el punto activo */  
+}  
+
+
+ /* Estilo general del carrusel */
+.section h3, .section h2 {
+  color: #e91e63;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  /* NO usar transition para scroll continuo */
+  will-change: transform;
+}
+
+.testimonial-item {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.student-photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.testimonial-content p {
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.testimonial-content span {
+  font-weight: bold;
+  color: #555;
+}
+
+
+/* Sección de Contacto*/
+.bg-black {
+  background-color: #000;
+}
+
+.btn-pink {
+  background-color: #e91e63;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-pink:hover {
+  background-color: #d81b60;
+  color: white;
+}
+
+.redes-sociales {
+  margin-top: 20px;
+}
+
+.redes-sociales a.social-icon {
+  margin: 0 12px;
+  font-size: 28px;
+  color: #e91e63;
+  transition: color 0.3s ease;
+}
+
+.redes-sociales a.social-icon:hover {
+  color: #ad1457;
+}
+
+/* Íconos para diferentes redes sociales, con colores específicos */
+.redes-sociales a.facebook:hover {
+  color: #3b5998;
+}
+
+.redes-sociales a.instagram:hover {
+  color: #e4405f;
+}
+
+.redes-sociales a.twitter:hover {
+  color: #1da1f2;
+}
+
+.redes-sociales a.linkedin:hover {
+  color: #0077b5;
+}
+
+     
+
+/* Estilos para el Footer */
+  footer {
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+}
+
+footer a {
+  color: #e91e63;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #d81b60;
+  text-decoration: underline;
+}
+
+
+     
+  
+/* Estilos para el Botón Fijo de WhatsApp */  
+.whatsapp-button {  
+    position: fixed;  
+    right: 20px; /* Distancia desde la derecha */  
+    bottom: 20px; /* Distancia desde la parte inferior */  
+    width: 60px; /* Ancho del botón */  
+    height: 60px; /* Altura del botón */  
+    background-color: #25d366; /* Color verde de WhatsApp */  
+    color: white; /* Color del icono */  
+    border-radius: 50%; /* Botón redondo */  
+    text-align: center;  
+    font-size: 30px; /* Tamaño del icono */  
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);  
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    transition: transform 0.3s ease; /* Animación al pasar el ratón */  
+}  
+
+.whatsapp-button:hover {  
+    transform: scale(1.1); /* Escala el botón al pasar el ratón */  
+}  
+
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Estilos para responsividad */  
+@media (max-width: 992px) {  
+    .container {  
+        width: 90%;  
+    }  
+
+     header {  
+        position: static;  
+        box-shadow: none;  
+     }  
+
+    header .logo,  
+    header nav {  
+        float: none;  
+        text-align: center;  
+    }  
+
+    header nav ul {  
+        margin-top: 10px;  
+    }  
+
+    header nav ul li {  
+        margin: 0 8px;  
+    }  
+
+    .hero {  
+        padding: 6rem 0;  
+    }  
+
+    .hero h1 {  
+        font-size: 2.5rem;  
+    }  
+
+    .hero p {  
+        font-size: 1.3rem;  
+    }  
+
+    .cta-button {  
+        font-size: 1.1rem;  
+        padding: 10px 20px;  
+    }  
+
+     .cta-button.small {  
+        padding: 6px 12px;  
+        font-size: 0.9rem;  
+     }  
+
+    .section {  
+        padding: 3rem 0;  
+    }  
+
+    .section h2 {  
+        font-size: 2.2rem;  
+    }  
+
+    .section p {  
+        font-size: 1rem;  
+    }  
+
+    .content-block {  
+        flex-direction: column;  
+        text-align: center;  
+        gap: 30px;  
+    }  
+
+     .content-block .media-container {  
+        width: 90%;  
+        margin: 0 auto;  
+        height: 250px;  
+     }  
+
+      .content-block .media-container.small {  
+         width: 100px;  
+         height: 100px;  
+      }  
+
+     .content-block > div {  
+        width: 90%;  
+        margin: 0 auto;  
+     }  
+
+     .content-block h3 {  
+        font-size: 1.8rem;  
+     }  
+
+    .grid-container {  
+        grid-template-columns: 1fr;  
+        gap: 20px;  
+    }  
+
+    .grid-item {  
+        padding: 20px;  
+        align-items: center;  
+    }  
+
+    .grid-item h3 {  
+        font-size: 1.4rem;  
+    }  
+
+    .grid-item p {  
+        text-align: center;  
+    }  
+
+    .media-container {  
+        height: 180px;  
+    }  
+
+     .media-container.large {  
+        height: 300px;  
+     }  
+
+
+    .image-mosaic {  
+         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  
+         gap: 10px;  
+    }  
+
+    .image-mosaic .media-container {  
+        height: 200px;  
+    }  
+  }
+  
+  
+  
+  
+  
+  
